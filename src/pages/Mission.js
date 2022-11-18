@@ -1,7 +1,7 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import './mission.css';
 import { FetchMissionsHandler } from '../redux/missions/mission';
+import './mission.css';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -9,7 +9,8 @@ const Mission = () => {
   useEffect(() => {
     if (!missions.length) dispatch(FetchMissionsHandler());
   }, []);
-  console.log(missions, '##');
+
+  return (
     <div className="missions">
       <table>
         <thead className="tableHeader">
@@ -21,21 +22,29 @@ const Mission = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className="missionName">Thaicom</td>
-            <td className="missionDescription">askdjaksdajdkasjdkas njdajlas anjnajsdj ajksdnajsdjas njfdasdjas ajdnajxende</td>
-            <td className="btnRow">
-              <span className="activeMember">Active Member </span>
-            </td>
-            <td className="btnRow">
-              <button type="button" className="activeButton">
-                Leave Mission
-              </button>
-            </td>
-          </tr>
+          {missions.map((el) => (
+            <tr key={el.mission_id}>
+              <td className="missionName">{el.mission_name}</td>
+              <td className="missionDescription">{el.description}</td>
+              <td className="btnRow">
+                <span className="activeMember">
+                  Active Member
+                </span>
+              </td>
+              <td className="btnRow">
+                <button
+                  type="button"
+                  className="activeButton"
+                >
+                  Leave Mission
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-    </div>;
+    </div>
+  );
 };
 
 export default Mission;

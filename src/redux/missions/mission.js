@@ -13,10 +13,8 @@ const missionsReducer = (state = missions, action) => {
   switch (action.type) {
     case FETCH_MISSIONS:
       return action.payload.map((mission) => ({ ...mission, active: false }));
-
     default:
       return state;
   }
 };
-
 export default missionsReducer;
