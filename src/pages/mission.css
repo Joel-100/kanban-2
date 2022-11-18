@@ -1,0 +1,108 @@
+.missions {
+  margin-right: 2.5rem;
+  margin-left: 4rem;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: left;
+  border: 2px solid #c0c0c0;
+}
+
+thead {
+  border-bottom: 3px solid #c0c0c0;
+  height: 10vh;
+}
+
+thead th {
+  padding: 10px;
+}
+
+thead th:first-child {
+  width: 8%;
+}
+
+thead th:nth-child(2) {
+  width: 59%;
+}
+
+thead th:nth-child(3) {
+  width: 16%;
+}
+
+thead th:nth-child(4) {
+  width: 17%;
+}
+
+.tableHeader {
+  font-size: 25px;
+  font-weight: 900;
+  padding: 10px;
+}
+
+tbody td {
+  padding: 10px;
+  border: 2px solid #c0c0c0;
+}
+
+tbody > :nth-child(odd) {
+  background-color: #dcdcdc;
+}
+
+.missionName {
+  font-weight: 900;
+  font-size: 20px;
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+.btnRow {
+  text-align: center;
+}
+
+.activeButton {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 3px solid #f00;
+  border-radius: 5px;
+  color: #f00;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.inactiveButton {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  border: 3px solid #404040;
+  border-radius: 5px;
+  color: #404040;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.activeMember {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #00bfff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.inactiveMember {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #696969;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
