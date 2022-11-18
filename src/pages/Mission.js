@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { FetchMissionsHandler } from '../redux/missions/mission';
+import { FetchMissionsHandler, ToggleMission } from '../redux/missions/mission';
 import './mission.css';
 
 const Mission = () => {
@@ -9,6 +9,7 @@ const Mission = () => {
   useEffect(() => {
     if (!missions.length) dispatch(FetchMissionsHandler());
   }, []);
+  const HandleClick = (id) => dispatch(ToggleMission(id));
 
   return (
     <div className="missions">
@@ -27,16 +28,17 @@ const Mission = () => {
               <td className="missionName">{el.mission_name}</td>
               <td className="missionDescription">{el.description}</td>
               <td className="btnRow">
-                <span className="activeMember">
-                  Active Member
+                <span className={el.active ? 'activeMember' : 'inactiveMember'}>
+                  {el.active ? 'Active Member' : 'Not A member'}
                 </span>
               </td>
               <td className="btnRow">
                 <button
                   type="button"
-                  className="activeButton"
+                  className={el.active ? 'activeButton' : 'inactiveButton'}
+                  onClick={() => HandleClick(el.mission_id)}
                 >
-                  Leave Mission
+                  {el.active ? 'Leave Mission' : 'Join Mission'}
                 </button>
               </td>
             </tr>
