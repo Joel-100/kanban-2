@@ -14,7 +14,6 @@ function Rockets() {
   useEffect(() => {
     dispatch(fetchAllRockets());
   }, []);
-  console.log(rockets);
   return (
     <div className="rocket-container">
       {rockets.map((item) => (

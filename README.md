@@ -1,4 +1,6 @@
-# Space-Travelers-Hub
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Space Traveler
 
 > A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
@@ -6,6 +8,10 @@
 
 - React
 - Redux
+
+## Live Demo
+
+[Live Demo Link](https://github.com/Joel-100/kanban-2)
 
 ## Getting Started
 
@@ -36,6 +42,8 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
+Feel free to check the [issues page](../../issues/).
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
@@ -47,11 +55,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT license]licensed.
-
-
-
-
-
-
+This project is [MIT license](https://choosealicense.com/licenses/mit/) licensed.
 
