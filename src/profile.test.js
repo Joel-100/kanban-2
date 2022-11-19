@@ -4,12 +4,13 @@ import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import store from './redux/configStore';
 import Profile from './pages/Profile';
+
 describe('Test Profile Page', () => {
   it('should render the profile page', () => {
     render(
       <Provider store={store}>
         <Profile />
-      </Provider>
+      </Provider>,
     );
     expect(screen.getByText('My Missions')).toBeInTheDocument();
     expect(screen.getByText('My Rockets')).toBeInTheDocument();
@@ -18,9 +19,9 @@ describe('Test Profile Page', () => {
     render(
       <Provider store={store}>
         <Profile />
-      </Provider>
+      </Provider>,
     );
     expect(screen.getByText('My Rockets')).toBeInTheDocument();
     expect(screen.getByText('My Missions')).toBeInTheDocument();
   });
-}); 
+});
