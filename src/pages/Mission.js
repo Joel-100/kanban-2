@@ -7,7 +7,7 @@ const Mission = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionsReducer);
   useEffect(() => {
-    if (!missions.length) dispatch(FetchMissionsHandler());
+    dispatch(FetchMissionsHandler());
   }, []);
   const HandleClick = (id) => dispatch(ToggleMission(id));
 
