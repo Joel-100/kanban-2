@@ -10,7 +10,7 @@ describe('Test MyProfile Component', () => {
     render(
       <Provider store={store}>
         <MissionProfile />
-      </Provider>
+      </Provider>,
     );
     expect(screen.getByText('My Missions')).toBeInTheDocument();
   });
