@@ -10,7 +10,7 @@
 - Redux
 
 ## Live Demo
-> Not available yet
+> [Demo](https://kanban-2.vercel.app/)
 
 
 ## Getting Started
