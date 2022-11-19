@@ -17,6 +17,7 @@ export const toggleReservation = (payload) => ({
 
 export const fetchAllRockets = () => async (dispatch) => {
   const response = await rocketFetch();
+  console.log(response);
   dispatch(fetchRockets(response));
 };
 
