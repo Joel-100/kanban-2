@@ -10,8 +10,8 @@
 - Redux
 
 ## Live Demo
+> Not available yet
 
-[Live Demo Link](https://github.com/Joel-100/kanban-2)
 
 ## Getting Started
 
