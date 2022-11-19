@@ -7,7 +7,12 @@ const url = 'https://api.spacexdata.com/v3/missions';
 
 export const FetchMissionsHandler = () => async (dispatch) => {
   const response = await axios.get(url);
-  return dispatch({ type: FETCH_MISSIONS, payload: response.data });
+  const missionsData = response.data.map((mission) => ({
+    mission_id: mission.mission_id,
+    mission_name: mission.mission_name,
+    description: mission.description,
+  }));
+  return dispatch({ type: FETCH_MISSIONS, payload: missionsData });
 };
 
 export const ToggleMission = (id) => ({ type: TOGGLE_MISSION, id });

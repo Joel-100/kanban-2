@@ -32,6 +32,10 @@ To get a local copy up and running follow these simple example steps.
 - LinkedIn: [@freddykaberuka](https://www.linkedin.com/in/kaberuka-freddy-853b08153/)
 
 
+## Future Features
+- Add responsiveness to website
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
