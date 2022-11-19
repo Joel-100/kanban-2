@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
-import { Provider } from "react-redux";
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import store from './redux/configStore';
-import Rockets from "./pages/Rockets";
-import Mission from "./pages/Mission";
+import Rockets from './pages/Rockets';
+import Mission from './pages/Mission';
 import Profile from './pages/Profile';
 
 describe('Test UI', () => {
@@ -10,7 +10,7 @@ describe('Test UI', () => {
     const tree = render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -19,7 +19,7 @@ describe('Test UI', () => {
     const tree = render(
       <Provider store={store}>
         <Mission />
-      </Provider>
+      </Provider>,
     );
     expect(tree).toMatchSnapshot();
   });
@@ -28,7 +28,7 @@ describe('Test UI', () => {
     const tree = render(
       <Provider store={store}>
         <Profile />
-      </Provider>
+      </Provider>,
     );
     expect(tree).toMatchSnapshot();
   });
